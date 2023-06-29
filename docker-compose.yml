@@ -1,0 +1,25 @@
+version: '3'
+services:
+  aws:
+    image: manojraut8695/trainingaws:latest
+    ports:
+      - "8000:80"
+    deploy:
+      replicas: 3
+  devops:
+    image: manojraut8695/trainingdevops:latest
+    ports:
+      - "8001:80"
+    deploy:
+      replicas: 3
+  azure:
+    image: manojraut8695/trainingazure:latest
+    ports:
+      - "8002:80"
+    deploy:
+      replicas: 5
+  datascience:
+    image: manojraut8695/trainingdatascience:latest
+    ports:
+      - "8003:80"
+    replicas: 5
